@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="apple-touch-icon" href="/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VectorFusion - SVG Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              background: 'var(--bg-app)',
+              surface: 'var(--bg-surface)',
+              primary: '#6366f1',
+              secondary: '#a855f7',
+            },
+            fontFamily: {
+              sans: ['"Google Sans Code"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              mono: ['"Google Sans Code"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap');
+
+      :root {
+        --bg-app: #f1f5f9;
+        --bg-surface: #ffffff;
+        --text-main: #0f172a;
+        
+        --shimmer-base: #0f172a;
+        --shimmer-shine: #94a3b8;
+      }
+      .dark {
+        --bg-app: #000000;
+        --bg-surface: #000000;
+        --text-main: #e5e5e5;
+
+        --shimmer-base: #262626;
+        --shimmer-shine: #ffffff;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Google Sans Code", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: var(--bg-app);
+        color: var(--text-main);
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1; 
+        border-radius: 4px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #262626;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8; 
+      }
+      .dark ::-webkit-scrollbar-thumb:hover {
+        background: #404040;
+      }
+
+      .checkerboard {
+        background-color: var(--bg-surface);
+        background-image: linear-gradient(45deg, var(--bg-app) 25%, transparent 25%), linear-gradient(-45deg, var(--bg-app) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, var(--bg-app) 75%), linear-gradient(-45deg, transparent 75%, var(--bg-app) 75%);
+        background-size: 20px 20px;
+        background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+      }
+      
+      .dark .checkerboard {
+        background-image: linear-gradient(45deg, #171717 25%, transparent 25%), linear-gradient(-45deg, #171717 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #171717 75%), linear-gradient(-45deg, transparent 75%, #171717 75%);
+      }
+
+      .preview-bg-light { background-color: #ffffff; background-image: none; }
+      .preview-bg-dark { background-color: #000000; background-image: none; }
+      
+      .preview-bg-check-light {
+        background-color: #ffffff;
+        background-image: linear-gradient(45deg, #e2e8f0 25%, transparent 25%), linear-gradient(-45deg, #e2e8f0 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #e2e8f0 75%), linear-gradient(-45deg, transparent 75%, #e2e8f0 75%);
+        background-size: 20px 20px;
+        background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+      }
+      
+      .preview-bg-check-dark {
+        background-color: #000000;
+        background-image: linear-gradient(45deg, #171717 25%, transparent 25%), linear-gradient(-45deg, #171717 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #171717 75%), linear-gradient(-45deg, transparent 75%, #171717 75%);
+        background-size: 20px 20px;
+        background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+      }
+
+      @keyframes shimmer {
+        0% {
+          background-position: 100% 0;
+        }
+        100% {
+          background-position: -100% 0;
+        }
+      }
+
+      .shimmer-text {
+        background: linear-gradient(
+          110deg, 
+          var(--shimmer-base) 40%, 
+          var(--shimmer-shine) 50%, 
+          var(--shimmer-base) 60%
+        );
+        background-size: 200% 100%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        animation: shimmer 3s linear infinite;
+        display: inline-block;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.0/",
+    "react": "https://esm.sh/react@^19.2.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.9.6",
+    "lucide-react": "https://esm.sh/lucide-react@^0.554.0",
+    "clsx": "https://esm.sh/clsx@^2.1.1",
+    "@monaco-editor/react": "https://esm.sh/@monaco-editor/react@^4.7.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
