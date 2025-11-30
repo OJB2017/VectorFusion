@@ -20,7 +20,12 @@ const Navbar: React.FC<NavbarProps> = ({ currentView, onViewChange }) => {
 
   return (
     <nav className="h-16 border-b border-slate-200 dark:border-neutral-800 bg-surface/95 backdrop-blur-md sticky top-0 z-50 flex items-center justify-between px-4 lg:px-8 transition-colors duration-300">
-      <div className="flex items-center gap-3 cursor-pointer" onClick={() => onViewChange('studio')}>
+      <a 
+        href="https://github.com/OracleMythix/VectorFusion"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-3"
+      >
         <div className="w-8 h-8 rounded-lg shadow-md overflow-hidden shrink-0">
           <img 
             src={`data:image/svg+xml;utf8,${encodeURIComponent(DEFAULT_SVG)}`} 
@@ -31,7 +36,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentView, onViewChange }) => {
         <span className="text-xl font-bold shimmer-text">
           VectorFusion
         </span>
-      </div>
+      </a>
 
       <div className="flex items-center gap-1 bg-slate-100 dark:bg-neutral-900/50 p-1 rounded-xl border border-slate-200 dark:border-neutral-800/50">
         {navItems.map((item) => (
